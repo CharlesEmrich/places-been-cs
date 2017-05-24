@@ -1,0 +1,38 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<div class="row">
+  <div class="col-md-2">
+    <div class="btn-group-vertical">
+      <form action="/" method="get">
+        <button type="submit" class="btn btn-default">Return to Home</button>
+      </form>
+      <form action="/places/clear" method="post">
+        <button type="submit" class="btn btn-default">Clear All Places</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-10">
+    <form action="/" method="post">
+      <div class="form-group">
+        <label for="new-name">Where?</label>
+        <input class="form-control" id="new-name" name="new-name" type="text">
+      </div>
+      <div class="form-group">
+        <label for="new-season">When?</label>
+        <select name="new-season" class="form-control">
+          <option value="winter">Winter</option>
+          <option value="spring">Spring</option>
+          <option value="summer">Summer</option>
+          <option value="fall">Fall</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="new-duration">For How Long? (in days)</label>
+        <input class="form-control" id="new-duration" name="new-duration" type="number">
+      </div>
+      <button type="submit" class="btn btn-default">Add this Place</button>
+    </form>
+  </div>
+</div>
